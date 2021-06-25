@@ -1,7 +1,3 @@
-// const express = require('express')
-// const path = require('path')
-// const PORT = process.env.PORT || 5000
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
@@ -16,7 +12,7 @@ const COLLECTION_NAME_2 = "daily_usage_carpark";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// var database, collection_1, collection_2;
+var database, collection_1, collection_2;
 
 
 app.post("/carpark", (request, response) => {
@@ -177,6 +173,9 @@ app.listen(port, () => {
     });
 });
 
+// const express = require('express')
+// const path = require('path')
+// const PORT = process.env.PORT || 5000
 
 // express()
 //   .use(express.static(path.join(__dirname, 'public')))
